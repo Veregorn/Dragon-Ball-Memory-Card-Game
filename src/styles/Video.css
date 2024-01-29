@@ -1,0 +1,8 @@
+#background-video {
+    filter: brightness(0.5);
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
