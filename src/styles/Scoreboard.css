@@ -1,0 +1,12 @@
+#scoreboard {
+    display: flex;
+    flex-direction: row;
+}
+
+#scoreboard p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    text-align: center;
+    color: #fff;
+}

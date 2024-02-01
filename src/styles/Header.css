@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+#small-logo {
+    width: 300px;
+}
+
+#level-selected {
+    font-size: 30px;
+    color: #fff;
+}

@@ -6,6 +6,10 @@ function Button(props) {
         return (
             <button className='button' id={props.id} onClick={props.onClick}>{props.text}</button>
         )
+    } else if (props.id.includes('level-button')) {
+        return (
+            <button className='level-button' id={props.id} onClick={props.onClick}>{props.text}</button>
+        )
     }
 }
 
