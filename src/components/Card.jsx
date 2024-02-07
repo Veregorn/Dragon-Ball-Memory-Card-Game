@@ -18,7 +18,6 @@ Card.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    isClicked: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired
 }
 
