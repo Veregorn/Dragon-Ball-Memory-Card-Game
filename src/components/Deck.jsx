@@ -11,7 +11,7 @@ function shuffleArray(array) {
   }
 }
 
-function Deck({deck, score, setScore, setIsGameOver}) {
+function Deck({deck, score, setScore, setIsGameOver, setIsWinner}) {
 
   // State variable with the array of characters player has clicked (only ids are stored)
   const [clickedCharacters, setClickedCharacters] = useState([])
@@ -20,12 +20,17 @@ function Deck({deck, score, setScore, setIsGameOver}) {
   const handleClick = (id) => {
     // If the character has not been clicked, add it to the clickedCharacters array and increment the score
     if (!clickedCharacters.includes(id)) {
-      setClickedCharacters([...clickedCharacters, id])
-      setScore(score + 1)
+        setClickedCharacters([...clickedCharacters, id])
+        setScore(score + 1)
+        // If the score is equal to the deck size, the player has won
+        if (score + 1 === deck.length) {
+          setIsWinner(true)
+          setIsGameOver(true)
+        }
     } else { // Otherwise, reset the score and the clickedCharacters array
-      setScore(0)
-      setClickedCharacters([])
-      setIsGameOver(true)
+        setScore(0)
+        setClickedCharacters([])
+        setIsGameOver(true)
     }
   }
 
@@ -51,7 +56,8 @@ Deck.propTypes = {
   deck: PropTypes.array.isRequired,
   score: PropTypes.number.isRequired,
   setScore: PropTypes.func.isRequired,
-  setIsGameOver: PropTypes.func.isRequired
+  setIsGameOver: PropTypes.func.isRequired,
+  setIsWinner: PropTypes.func.isRequired
 }
 
 export default Deck
