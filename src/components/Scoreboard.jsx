@@ -5,8 +5,8 @@ function Scoreboard({score, highScore}) {
 
   return (
     <div id='scoreboard'>
-      <p id='score'>Score: {score}</p>
-      <p id='high-score'>High Score: {highScore}</p>
+      <h2 id='score'>Score: {score}</h2>
+      <h2 id='high-score'>High Score: {highScore}</h2>
     </div>
   )
 }

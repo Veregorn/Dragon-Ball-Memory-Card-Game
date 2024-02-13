@@ -96,6 +96,7 @@ function App() {
     // Copying the auxiliary array into the deck
     setDeck(auxDeck)
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deckSize, isGameOver]);
 
   return (
@@ -107,7 +108,7 @@ function App() {
       {/* If the game is over, render the Game Over modal*/}
       {isGameOver ? <GameOver setDifficultyLevel={setDifficultyLevel} setIsGameOver={setIsGameOver} isWinner={isWinner} setIsWinner={setIsWinner} setScore={setScore} setHighScore={setHighScore} /> : <></>}
       {/*If difficulty level is selected, render Header and Playground Components, otherwise render the Select Panel */}
-      {difficultyLevel == '' ? <SelectPanel handleDifficultyLevel={handleDifficultyLevel} /> : (<><Header difficultyLevel={difficultyLevel} score={score} highScore={highScore} /><Playground difficultyLevel={difficultyLevel} score={score} setScore={setScore} setIsGameOver={setIsGameOver} setIsWinner={setIsWinner} deck={deck} /></>)}
+      {difficultyLevel == '' ? <SelectPanel handleDifficultyLevel={handleDifficultyLevel} /> : (<><Header difficultyLevel={difficultyLevel} score={score} highScore={highScore} /><Playground difficultyLevel={difficultyLevel} score={score} setScore={setScore} isGameOver={isGameOver} setIsGameOver={setIsGameOver} setIsWinner={setIsWinner} deck={deck} /></>)}
       <Footer />
       <Video />
     </>

@@ -11,7 +11,7 @@ function Header({
 
   return (
     <header className='header'>
-      <img id='small-logo' src={logo} alt='Dragon Ball Logo' />
+      <a href="javascript:location.reload()"><img id='small-logo' src={logo} alt='Dragon Ball Logo' /></a>
       <h2 id='level-selected'>Level: {difficultyLevel}</h2>
       <Scoreboard score={score} highScore={highScore} />
     </header>

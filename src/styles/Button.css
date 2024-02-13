@@ -1,0 +1,36 @@
+.levelButton {
+    background-color: #000;
+    border: 2px solid #fff22d;
+    border-radius: 5px;
+    color: #fff22d;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+}
+
+.levelButton:hover {
+    background-color: #fff22d;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.control-button {
+    background-image: url('../../public/icons/music-on-icon.svg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    opacity: 0.5;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.music-paused {
+    background-image: url('../../public/icons/music-off-icon.svg')!important;
+}

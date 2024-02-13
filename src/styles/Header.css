@@ -1,13 +1,12 @@
 .header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    height: 10vh;
 }
 
 #small-logo {
     width: 300px;
-}
-
-#level-selected {
-    font-size: 30px;
-    color: #fff;
 }

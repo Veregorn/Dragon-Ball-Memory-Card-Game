@@ -16,10 +16,11 @@ function Footer({
 
     return (
       <footer>
-        <Button 
+        <Button
+          className={isMusicPlaying ? 'control-button' : 'control-button music-paused'}
           id='music-button' 
           onClick={() => setIsMusicPlaying(!isMusicPlaying)}
-          text={isMusicPlaying ? 'Stop Music' : 'Play Music'}
+          text=''
         />
         <Sound 
           url={backgroundMusic}
