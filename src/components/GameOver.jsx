@@ -21,8 +21,10 @@ function GameOver({setDifficultyLevel, setIsGameOver, isWinner, setIsWinner, set
             <div className='game-over-popup-content'>
                 {isWinner ? <h1 id='game-over-title'>Congratulations!</h1> : <h1 id='game-over-title'>Game Over!</h1>}
                 {isWinner ? <h2 id='game-over-subtitle'>You have won the game!</h2> : <h2 id='game-over-subtitle'>Better luck next time!</h2>}
-                <button id='play-again-button' onClick={handlePlayAgain}>Play Again</button>
-                <button id='main-menu-button' onClick={handleMainMenu}>Main Menu</button>
+                <div id='buttons-container'>
+                    <button id='play-again-button' onClick={handlePlayAgain}>Play Again</button>
+                    <button id='main-menu-button' onClick={handleMainMenu}>Main Menu</button>
+                </div>
             </div>
         </div>
     )

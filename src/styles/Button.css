@@ -19,7 +19,6 @@
 }
 
 .control-button {
-    background-image: url('../../public/icons/music-on-icon.svg');
     background-size: cover;
     background-position: center;
     border: none;
@@ -29,8 +28,30 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.control-button:hover {
+    transform: scale(1.1);
+}
+
+.music-playing {
+    background-image: url('../../public/icons/music-on-icon.svg');
 }
 
 .music-paused {
     background-image: url('../../public/icons/music-off-icon.svg')!important;
+}
+
+.contact-text {
+    font-size: 1rem;
+}
+
+.help-closed {
+    background-image: url('../../public/icons/help-icon.svg');
+}
+
+.help-opened {
+    background-image: url('../../public/icons/cross-icon.svg');
 }
